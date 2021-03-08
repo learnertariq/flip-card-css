@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+}
+
+.container {
+  margin: auto;
+  max-width: 1140px;
+  width: 90%;
+}
+
+.card {
+  font-size: 2.5rem;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;  
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flip-container {
+  perspective: 200rem;
+}
+
+.flip-container:hover .card {
+  transform: rotateX(180deg);
+  transform-origin: 50% 50%;
+}
+
+.card__face {
+  backface-visibility: hidden;
+  background-color: brown;
+  border-radius: 30px;
+  color: #fff;
+  height: 100%;
+  padding: 2rem;
+  position: absolute;
+  width: 100%;
+}
+
+.card__front {
+}
+
+.card__back {
+  transform: rotateX(180deg);
+}
